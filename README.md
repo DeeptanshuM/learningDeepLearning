@@ -8,7 +8,7 @@
 
 # Notes
 
-## Course 2: ______
+## Course 2: Improving Deep Neural Networks
 
 ### Setting up your Machine Learning Application
 
@@ -23,6 +23,7 @@
 - high variance ( —> overfitting) —> low error with train set and high error with test set
 - high bias and high variance —> high error with train set and significantly higher error with test set
 - low bias and low variance —> low errors with train and test sets
+
 <i>Note: the error comparisons mentioned above are with respect to the optimal (Bayes) error mentioned</i>
            
 <u>Basic recipe for machine learning</u>
@@ -35,3 +36,19 @@ High variance
 - More data
 - Regularization
 - find better neural network architecture
+
+### Regularizing NN
+
+Regularization -- add picture of notes
+
+Why does regularization reduce overfitting?
+
+- L~2~ regularization introduces term in cost equation that penalizes weight matrices for being too large
+- overfitting —> If lambda is large then W is small then Z is small then tanh is roughly linear then evey layer computes something roughly linear and so it reduces overfitting  
+
+Dropout regularization
+
+- go through each and eliminate some nodes randomly from that layer —> you end with a smaller, diminished network; repeat this for every training example
+- Inverted dropout is the most popular implementation
+
+
