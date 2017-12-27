@@ -1,4 +1,11 @@
 # What I've learnt (in reverse chronological order):
+
+## Course 2: Improving Deep Neural Networks
+- [Modelled 3-layer NN without regularization, with L2 regularization and with dropout](Regularization.ipynb)
+
+- [Modelled 3-layer NN without zero initializations, with random initializations and with He initializations](Initialization.ipynb)
+
+## Course 1: Neural Networks and Deep Learning
 - [Built and applied a deep neural network to supervised learning](Deep+Neural+Network+-+Application+v3.ipynb)
 
 - [implemented all the functions required for building a deep neural network](Building+your+Deep+Neural+Network+-+Step+by+Step+v5.ipynb)
