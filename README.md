@@ -1,4 +1,7 @@
 # What I've learnt (in reverse chronological order):
+- [Built and applied a deep neural network to supervised learning](Deep+Neural+Network+-+Application+v3.ipynb)
+
+- [implemented all the functions required for building a deep neural network](Building+your+Deep+Neural+Network+-+Step+by+Step+v5.ipynb)
 
 - [Built and trained a 2-class classification neural network with a single hidden layer, and implemented forward propagation and backpropagation](Planar+data+classification+with+one+hidden+layer+v4.ipynb)
 
@@ -42,13 +45,51 @@ High variance
 Regularization -- add picture of notes
 
 Why does regularization reduce overfitting?
-
 - L~2~ regularization introduces term in cost equation that penalizes weight matrices for being too large
 - overfitting —> If lambda is large then W is small then Z is small then tanh is roughly linear then evey layer computes something roughly linear and so it reduces overfitting  
 
 Dropout regularization
-
 - go through each and eliminate some nodes randomly from that layer —> you end with a smaller, diminished network; repeat this for every training example
 - Inverted dropout is the most popular implementation
 
+Why does drop out work?
+- It's like L~2~ regularization, but more adaptive
+- Intuiation : can’t rely on any one feature, so have to spread out weights —> shrinks weights —> e.g., useful in computer vision because there are so many input features overfitting is very common and dropout is very useful here
+- downside cost function is no longer well defined —> may not go down with every iteration of gradient descent
+
+data auigmentation hack: to get more data for computer vision, just modify existing images: flip horizontally, randomly rotate and zoom etc.
+
+Early stopping
+- stop iterating when dev set error is minimum
+- downside: this is against the practice of orthogonalization
+- orthogonalization: focus on one task at a time—> first optimize cost function (gradient descent etc…) —> second do not over fit (regularization etc…)
+- Early stopping couples the first and second tasks
+
+### Setting Up an Optimization Problem:
+
+Normalize Inputs —> why? —> because then all features will be on the same scale —> cost function will be more “round” —> it’ll be easier to optimize 
+
+Vanishing/exploding gradients —> careful choice of initializing weights partially solves this problem
+
+Weight initializations 
+- multiply randomly initialized weights by variance 
+- for Relu variance is sqrt(2 / number of neuron in input layer) 
+- for tanh it’s sqrt(1 / number of neuron in input layer) )
+
+Checking derivative equation: use triangle of width of 2 epsilon
+
+Gradient checking for a neural vector —> [insert picture] —> only use to debug, doesn't work with dropout
+
+### Practical aspects of deep learning quiz notes:
+
+1. If 10 millions examples —> tran/dev/test split should be 98/1/1%
+2. Dev and test set should come from same distribution 
+3. If NN seems to have have high bias: increase num of units in each hidden layer and make NN deeper
+4. If low error with train set but high error with dev set —> increase regularization parameter lambda and get more training data
+5. Weight decay is a regularization technique (such as L2 regularization) that results in gradient descent shrinking weight on every iteration
+6. When regularization hyperparameter lambda is increased —> weights are pushed toward becoming smaller toward 0
+7. With inverted dropout technique, at test time: dp not apply dropout (do not randomly eliminate units) and do not keep the 1/keep_prob factor in the calculations used in training
+8. Increasing the parameter keep_prob from (say) .5 to .6 will likely cause: reduction of the regularization effect and case the neural network to end up with a lower training test set error
+9. Techniques useful for reducing variance/overfitting —> data augmentation, L2 regularization, Dropout
+10. Normalize the inputs x to make the cost function faster to optimize. 
 
