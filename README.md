@@ -64,3 +64,18 @@ Early stopping
 - downside: this is against the practice of orthogonalization
 - orthogonalization: focus on one task at a time—> first optimize cost function (gradient descent etc…) —> second do not over fit (regularization etc…)
 - Early stopping couples the first and second tasks
+
+### Setting Up an Optimization Problem:
+
+Normalize Inputs —> why? —> because then all features will be on the same scale —> cost function will be more “round” —> it’ll be easier to optimize 
+
+Vanishing/exploding gradients —> careful choice of initializing weights partially solves this problem
+
+Weight initializations 
+- multiply randomly initialized weights by variance 
+- for Relu variance is sqrt(2 / number of neuron in input layer) 
+- for tanh it’s sqrt(1 / number of neuron in input layer) )
+
+Checking derivative equation: use triangle of width of 2 epsilon
+
+Gradient checking for a neural vector —> [insert picture] —> only use to debug, doesn't work with dropout
