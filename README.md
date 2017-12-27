@@ -1,6 +1,8 @@
 # What I've learnt (in reverse chronological order):
 
 ## Course 2: Improving Deep Neural Networks
+- [Implemented 1-dimensional and N-dimensional gradient checking](Gradient+Checking+v1.ipynb)
+
 - [Modelled 3-layer NN without regularization, with L2 regularization and with dropout](Regularization.ipynb)
 
 - [Modelled 3-layer NN without zero initializations, with random initializations and with He initializations](Initialization.ipynb)
