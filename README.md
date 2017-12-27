@@ -1,4 +1,7 @@
 # What I've learnt (in reverse chronological order):
+- [Built and applied a deep neural network to supervised learning](Deep+Neural+Network+-+Application+v3.ipynb)
+
+- [implemented all the functions required for building a deep neural network](Building+your+Deep+Neural+Network+-+Step+by+Step+v5.ipynb)
 
 - [Built and trained a 2-class classification neural network with a single hidden layer, and implemented forward propagation and backpropagation](Planar+data+classification+with+one+hidden+layer+v4.ipynb)
 
@@ -42,13 +45,22 @@ High variance
 Regularization -- add picture of notes
 
 Why does regularization reduce overfitting?
-
 - L~2~ regularization introduces term in cost equation that penalizes weight matrices for being too large
 - overfitting —> If lambda is large then W is small then Z is small then tanh is roughly linear then evey layer computes something roughly linear and so it reduces overfitting  
 
 Dropout regularization
-
 - go through each and eliminate some nodes randomly from that layer —> you end with a smaller, diminished network; repeat this for every training example
 - Inverted dropout is the most popular implementation
 
+Why does drop out work?
+- It's like L~2~ regularization, but more adaptive
+- Intuiation : can’t rely on any one feature, so have to spread out weights —> shrinks weights —> e.g., useful in computer vision because there are so many input features overfitting is very common and dropout is very useful here
+- downside cost function is no longer well defined —> may not go down with every iteration of gradient descent
 
+data auigmentation hack: to get more data for computer vision, just modify existing images: flip horizontally, randomly rotate and zoom etc.
+
+Early stopping
+- stop iterating when dev set error is minimum
+- downside: this is against the practice of orthogonalization
+- orthogonalization: focus on one task at a time—> first optimize cost function (gradient descent etc…) —> second do not over fit (regularization etc…)
+- Early stopping couples the first and second tasks
