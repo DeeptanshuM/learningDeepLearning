@@ -102,3 +102,13 @@ Gradient checking for a neural vector —> [insert picture] —> only use to deb
 9. Techniques useful for reducing variance/overfitting —> data augmentation, L2 regularization, Dropout
 10. Normalize the inputs x to make the cost function faster to optimize. 
 
+### Optimization Algorithms
+
+Mini-batch gradient descent
+- split training sets into “mini-batches” —> process one mini-batch at a time, at one step of gradient descent
+- unlike in batch gradient step where one pass over training data leads to one step of gradient descent, with mini-batch gradient descent one pass over training data leads to many number of gradient descent steps
+- cost may not decrease on every iteration of mini-batch gradient descent
+- Batch gradient descent —> too slow
+- Stochastic gradient descent —> loose speedup from vectorization
+- If less than 2000 training examples --> use batch gradient descent
+- else make sure to choose a power of 2 for size of mini-batch and make sure that mini-batch can fit in cpu/gpu memory
