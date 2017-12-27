@@ -79,3 +79,17 @@ Weight initializations
 Checking derivative equation: use triangle of width of 2 epsilon
 
 Gradient checking for a neural vector —> [insert picture] —> only use to debug, doesn't work with dropout
+
+### Practical aspects of deep learning quiz notes:
+
+1. If 10 millions examples —> tran/dev/test split should be 98/1/1%
+2. Dev and test set should come from same distribution 
+3. If NN seems to have have high bias: increase num of units in each hidden layer and make NN deeper
+4. If low error with train set but high error with dev set —> increase regularization parameter lambda and get more training data
+5. Weight decay is a regularization technique (such as L2 regularization) that results in gradient descent shrinking weight on every iteration
+6. When regularization hyperparameter lambda is increased —> weights are pushed toward becoming smaller toward 0
+7. With inverted dropout technique, at test time: dp not apply dropout (do not randomly eliminate units) and do not keep the 1/keep_prob factor in the calculations used in training
+8. Increasing the parameter keep_prob from (say) .5 to .6 will likely cause: reduction of the regularization effect and case the neural network to end up with a lower training test set error
+9. Techniques useful for reducing variance/overfitting —> data augmentation, L2 regularization, Dropout
+10. Normalize the inputs x to make the cost function faster to optimize. 
+
