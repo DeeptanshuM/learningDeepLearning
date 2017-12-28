@@ -112,3 +112,25 @@ Mini-batch gradient descent
 - Stochastic gradient descent —> loose speedup from vectorization
 - If less than 2000 training examples --> use batch gradient descent
 - else make sure to choose a power of 2 for size of mini-batch and make sure that mini-batch can fit in cpu/gpu memory
+
+Exponentially weighted averages
+- lowering beta makes algorithm more susceptible to noise and vice versa
+- bias correction will help get a better estimate early on
+- allows algorithm to take a more straightforward path to the minimum
+
+Gradient descent with momentum, RMS prop, Adam optimization algorithm
+
+Learning rate decay
+- slowly reduce learning rate over time —> as learning approaches convergence then having a slower learning rate allows you to take smaller steps 
+
+1 epoch ==>1 pass through the data
+
+The problem of local optima
+- most points of zero gradient are saddle points —> much more likely to run into saddle points than local optima in high dimensional spaces 
+- plateaus are a problem as they can slow down learning —> algorithms like gradient descent with momentum, RMS prop, Adam optimization algorithm help 
+
+### Optimization Algorithms Quiz notes
+
+- If batch gradient descent in a deep NN is taking excessively long then try using Adam, tuning the learning rate, better random initializations for the weights and mini-batch gradient-descent.
+- for gradient descent	—> increasing momentum —> reduced oscillation 
+
