@@ -128,3 +128,9 @@ Learning rate decay
 The problem of local optima
 - most points of zero gradient are saddle points —> much more likely to run into saddle points than local optima in high dimensional spaces 
 - plateaus are a problem as they can slow down learning —> algorithms like gradient descent with momentum, RMS prop, Adam optimization algorithm help 
+
+### Optimization Algorithms Quiz notes
+
+- If batch gradient descent in a deep NN is taking excessively long then try using Adam, tuning the learning rate, better random initializations for the weights and mini-batch gradient-descent.
+- for gradient descent	—> increasing momentum —> reduced oscillation 
+
