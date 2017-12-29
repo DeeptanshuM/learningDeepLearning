@@ -136,3 +136,22 @@ The problem of local optima
 - If batch gradient descent in a deep NN is taking excessively long then try using Adam, tuning the learning rate, better random initializations for the weights and mini-batch gradient-descent.
 - for gradient descent	—> increasing momentum —> reduced oscillation 
 
+### Hyperparameter Tuning
+
+Tuning process
+- have to with learning rate (alpha), beta, beta1, beta2, epsilon, # layer, # hidden units, learning rate decay, mini-batch size
+- most important —> alpha
+- 2nd most important —> beta (usually .9), # hidden units, mini-batch size
+- 3rd most important —> # layers, learning rate decay
+- beta1 is usually .9, beta2 is usually .999 and epsilon is usually 1e-8
+- these are not fixed rules :)
+- Coarse to fine search
+
+Using an appropriate scale to pick hyperparameters  
+- sometimes use log scale 
+- for exponentially weighted averages: recall that <i> using beta = .9 is like taking averages of last 10 values whereas using beta = .999 is like averaging over last 1000 values  </i> —> doesn’t make sense to sample on a linear scale —> using log scale here will help sample more densely
+
+Hyperparameter Tuning in practice
+- re-evaluate occasionally 
+- Panda approach—> if contrainued resources (e.g. less cpus/gpus but lots of data) —> maybe babysit one model
+- Caviar approach —> train many models in parallel
