@@ -155,3 +155,18 @@ Hyperparameter Tuning in practice
 - re-evaluate occasionally 
 - Panda approach—> if contrainued resources (e.g. less cpus/gpus but lots of data) —> maybe babysit one model
 - Caviar approach —> train many models in parallel
+
+### Batch Normalization (more effective than hyperparameter tuning)
+
+Normalizing inputs to speed up learning- normalize values of z (maybe a) of a hidden layer to train next layer’s W or b faster
+
+Fitting Batch Norm in a NN 
+- done after z calculation, before a calculation, in every layer
+- in practices, batch norm is applied on a mini-batch
+- if batch is used then the original bias parameter can be eliminated as batch norm will zero out the mean anyway
+
+Why does Batch Norm Work?
+- makes neurons in a deeper layer, say layer 10, more robust to changes than a neuron in an earlier layer, say layer 1
+- ensure that no matter how the values of z in a hidden layer shift, their mean and variance remains the same —> this limits the amount to which updating the parameters in an earlier layer changes the values that a deeper layer sees and has to learn on 
+- batch norm reduces the problem of input values changing —> causes these values to become more stable —> later layers of the NN have “more firm ground to stand on” —> weakens the coupling between what an earlier layer does and what a later layer does —> allows each layer to work more independently of other layers —> therefore, speeds up learning in the NN
+- each mini-batch is scaled by the mean/variance computed on just that mini-batch — this adds some noise (multiplicative noise by multiply by standard deviation and additive noise by subtracting the mean) to z values within a mini-batch — this has a slight regularization effect — not significant — noise can be reduced by making mini-batches bigger — don’t rely on/choose Batch Norm for regularization 
