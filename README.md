@@ -1,6 +1,8 @@
 # What I've learnt (in reverse chronological order):
 
 ## Course 2: Improving Deep Neural Networks
+- [Followed a tensorflow tutorial, and implemented a deep learning model using Tensorflow, to recognize numbers from 0 to 5 from the SIGNS dataset](Tensorflow+Tutorial.ipynb)
+
 - [Implemented the following optimization algorithms: Mini-batch Gradient Descent, Mini-batch Momentum and Mini-batch Adam](Optimization+methods.ipynb)
 
 - [Implemented 1-dimensional and N-dimensional gradient checking](Gradient+Checking+v1.ipynb)
