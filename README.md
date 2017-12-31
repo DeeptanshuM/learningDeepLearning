@@ -22,6 +22,9 @@
 
 - [Practised Numpy basics (math functions, broadcasting and vectorization)](Python+Basics+With+Numpy+v3.ipynb)
 
+***
+***
+
 # Notes
 
 ## Course 2: Improving Deep Neural Networks
@@ -178,3 +181,34 @@ Batch Norm at test time
 
 ### Multi-class classification  — softmax…
 
+***
+
+## Course 3: Structured Machine Learning Projects
+
+###Introduction to ML Strategy 
+
+Orthogonalization —> 1st fit training set well —> only then fit dev set well —> only then fit test set well —> only then determine performance in real world
+
+###Setting up the goal 
+
+Single number evaluation metric 
+-  have just one real number metric to tell if the new thing is better or worse than the last thing
+- to judge classifier, instead of using precision and recall metrics, use one metric that combine precision and recall —> f1 score (harmonic mean of precision and recall)
+- dev set + single number metric key to speeding up iterative process of improving the machine learning algorithm
+
+Satisficing and optimizing matrices
+- introduce a condition to judge a metric —> the metric has to be just good enough to satisfy the condition —> therefore, called the satisficing metric
+- have one metric that must be optimized; all other metrics can be satisficing metrics
+
+Train/dev/test distributions
+-  **dev and test sets must be from the same distribution**
+- choose dev and test set to reflect data you expect to get in the future and consider important to do well on
+
+Size of dev and test sets
+- for big data —> 98/1/1
+- **test set must be good enough to high confidence in the overall performance of your system**
+
+When to change dev/test sets and metrics
+- if evaluation metric is no longer rank ordering preferences between algorithm —> change evaluation metric or dev and test sets
+
+<i> **Defining a metric is step 1 and doing well on it is step 2 (orthogonalization)** </i>
