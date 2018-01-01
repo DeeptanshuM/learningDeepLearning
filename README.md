@@ -185,11 +185,11 @@ Batch Norm at test time
 
 ## Course 3: Structured Machine Learning Projects
 
-###Introduction to ML Strategy 
+### Introduction to ML Strategy 
 
 Orthogonalization —> 1st fit training set well —> only then fit dev set well —> only then fit test set well —> only then determine performance in real world
 
-###Setting up the goal 
+### Setting up the goal 
 
 Single number evaluation metric 
 -  have just one real number metric to tell if the new thing is better or worse than the last thing
@@ -212,3 +212,34 @@ When to change dev/test sets and metrics
 - if evaluation metric is no longer rank ordering preferences between algorithm —> change evaluation metric or dev and test sets
 
 <i> **Defining a metric is step 1 and doing well on it is step 2 (orthogonalization)** </i>
+
+### Comparing to human-level performance
+
+Why human-level performance 
+- accuracy surpasses human-level performance but never Bayes optimal error
+- if algorithm doesn’t perform as good humans —> get labeled data from human, gain insight from manual error analysis, better analysis of bias/variance
+
+Avoidable bias
+- if training error and dev error are greater than human error % than reduce bias else focus on reducing variance
+- think of human-level error as a proxy for Bayes error
+- avoidable bias (difference between human error % and training error) acknowledges that error can’t be less than Bayes error
+- variance is a measure of the difference in performance on training and dev sets
+
+Understanding human-level performance 
+- human-level error should be a proxy for Bayes error —> so it should be as low as possible 
+
+Surpassing human-level performance
+- once human-level performance is surpassed —> don’t know whether to focus on bias or variance reduction tactics & can’t rely on human generated labels
+- ML has significantly outperformed humans at problems that are not natural perception tasks
+
+***Improving your model performance***
+- 2 fundamental assumptions of supervised learning: 1.You can fit the training set pretty well (~ avoidable bias) & 2. The training set performance generalizes pretty well to the dev/test set (~ variance)
+- look at difference between human-level and training error as an estimate for avoidable bias
+⋅⋅- Train bigger model
+⋅⋅- Train longer/better optimization algorithms (~ momentum, RMSprop, Adam)
+⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
+- look at difference between training error and dev error as an estimate for variance
+⋅⋅- More data
+⋅⋅- Regularization (L2, dropout, data augmentation)	
+⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
+
