@@ -249,3 +249,14 @@ Surpassing human-level performance
 - in case of high avoidable bias and low variance 
 ⋅⋅⋅- train a bigger model to try to do better on the training set 
 ⋅⋅⋅- try decreasing regularization. 
+
+### Error Analysis
+
+Carrying out error analysis
+- Look at mislabelled examples in dev set to evaluate ideas; evaluate multiple ideas in parallel
+
+Cleaning up incorrectly labelled data
+- DL algorithms are robust to random errors but less robust to systematically mislabelled data
+- look at overall dev set error & error due to incorrect labels & error due to all other causes —> then decide which ones to fix
+- remember to apply same process to dev and test sets to make sure that they come from the same distribution
+
