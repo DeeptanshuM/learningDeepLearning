@@ -235,11 +235,17 @@ Surpassing human-level performance
 ***Improving your model performance***
 - 2 fundamental assumptions of supervised learning: 1.You can fit the training set pretty well (~ avoidable bias) & 2. The training set performance generalizes pretty well to the dev/test set (~ variance)
 - look at difference between human-level and training error as an estimate for avoidable bias
-⋅⋅- Train bigger model
-⋅⋅- Train longer/better optimization algorithms (~ momentum, RMSprop, Adam)
-⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
+⋅⋅⋅- Train bigger model
+⋅⋅⋅- Train longer/better optimization algorithms (~ momentum, RMSprop, Adam)
+⋅⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
 - look at difference between training error and dev error as an estimate for variance
-⋅⋅- More data
-⋅⋅- Regularization (L2, dropout, data augmentation)	
-⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
+⋅⋅⋅- More data
+⋅⋅⋅- Regularization (L2, dropout, data augmentation)	
+⋅⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
 
+### QUIZ notes: Bird recognition in the city of Peacetopia (case study)
+
+- training and dev/test sets can come from different distributions but not dev and test sets
+- in case of high avoidable bias and low variance 
+⋅⋅⋅- train a bigger model to try to do better on the training set 
+⋅⋅⋅- try decreasing regularization. 
