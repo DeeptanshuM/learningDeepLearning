@@ -260,3 +260,10 @@ Cleaning up incorrectly labelled data
 - look at overall dev set error & error due to incorrect labels & error due to all other causes —> then decide which ones to fix
 - remember to apply same process to dev and test sets to make sure that they come from the same distribution
 
+Principles/guidelines:
+- apply same process to dev and test sets to make sure they continue to to come from the same distribution
+- consider examining examples the algorithm got right as well as the ones it got wrong
+- train and dev/test data may now come from slightly different distributions
+
+Build your first system quickly, then iterate
+- set up dev/set and metric, build system quickly, use bias/variance analysis and error analysis to prioritize next steps
