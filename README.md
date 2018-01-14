@@ -243,7 +243,7 @@ Surpassing human-level performance
 ⋅⋅⋅- Regularization (L2, dropout, data augmentation)	
 ⋅⋅⋅- NN architecture/hyperparameters search  (RNN, CNN etc)
 
-### QUIZ notes: Bird recognition in the city of Peacetopia (case study)
+### Quiz notes: Bird recognition in the city of Peacetopia (case study)
 
 - training and dev/test sets can come from different distributions but not dev and test sets
 - in case of high avoidable bias and low variance 
@@ -306,3 +306,14 @@ Multi-task learning
 - also makes sense it the NN is so big that it can in fact do well on multiple tasks
 - transfer learning is used a lot more to do though
 
+### End-to-end deep learning
+
+When to use and when not to use end-to-end deep learning
+- pros: “lets the data speak”, there’s less hand-designing of components needed
+- cons: may need lots of data, excludes potentially useful hand-designing of components
+- “key question: do you have sufficient data to learn the function of the complexity needed to map from X to Y”
+
+### Quiz notes: Autonomous driving (case study)
+
+- applied ML is a highly iterative process. If you train a basic model and carry out error analysis (see what mistakes it makes) it will help point you in more promising directions.
+- deep learning algorithms are quite robust to having slightly different train and dev distributions.
