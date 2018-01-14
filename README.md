@@ -290,3 +290,9 @@ Addressing data mismatch
 - carry out manual error analysis to try to understand difference between training adndev/test sets
 - make training data more similar to dev/test set or collect more data similar to dev/test sets
 - to make training data more similar to dev/test sets: artificial data synthesis
+
+### Learning from multiple tasks
+
+Transfer learning
+- use NN trained for x task to perform some other y task (x: cat recognition task, y: radiology image prediction) (both tasks have the same input)
+- when does transfer learning make sense — when you have a lot of data for the problem you are transferring from and relatively less data for the problem you are transferring to — if the vice versa is true then transfer learning doesn’t make sense
