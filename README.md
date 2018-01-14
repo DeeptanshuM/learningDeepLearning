@@ -285,3 +285,8 @@ Training and testing on different distributions
 - variance: difference between training set and training-dev set errors
 - data mismatch: difference between training-dev set and dev set errors
 - degree of overfitting to dev set: difference between dev and test set errors
+
+Addressing data mismatch
+- carry out manual error analysis to try to understand difference between training adndev/test sets
+- make training data more similar to dev/test set or collect more data similar to dev/test sets
+- to make training data more similar to dev/test sets: artificial data synthesis
