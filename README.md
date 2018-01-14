@@ -267,3 +267,21 @@ Principles/guidelines:
 
 Build your first system quickly, then iterate
 - set up dev/set and metric, build system quickly, use bias/variance analysis and error analysis to prioritize next steps
+
+Mismatched training and dev/test data
+
+Training and testing on different distributions
+- **dev and test set should always be comprised of data from distribution that is being optimized for**
+
+**Bias and variance with mismatched data distributions**
+- make training-dev set: it comes from same distribution as training set
+- don’t train on training-dev set
+- use it to judge bias and variance in case of mismatched data distributions
+- if high difference between training set error and training-dev set error and high difference between training error and dev error but training-dev error and dev error are similar: high variance
+- if training error and training-dev error are both similar but both are a lot lower than dev error: this is a data mismatch problem as your algorithm has learnt to  do well on the wrong data
+- if all training, training-dev and dev errors are similar and all higher than Bayes error: high bias
+- if training error is a lot higher than Bayes error and training-dev error is similar to training error and dev error is a lot higher than both then: high avoidable bias, low variance and big data mismatch problem
+- avoidable bias: difference between human level/Bayes error and training error
+- variance: difference between training set and training-dev set errors
+- data mismatch: difference between training-dev set and dev set errors
+- degree of overfitting to dev set: difference between dev and test set errors
