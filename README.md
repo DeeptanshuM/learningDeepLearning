@@ -296,3 +296,13 @@ Addressing data mismatch
 Transfer learning
 - use NN trained for x task to perform some other y task (x: cat recognition task, y: radiology image prediction) (both tasks have the same input)
 - when does transfer learning make sense — when you have a lot of data for the problem you are transferring from and relatively less data for the problem you are transferring to — if the vice versa is true then transfer learning doesn’t make sense
+
+Multi-task learning
+- enables NN to do multiple things at once (e.g., NN starts to try to detect car and person at the same time)
+- unlike softmax regression which assigns a single label to a single example, one image can have multiple labels
+- if among n tasks, the earlier layers of a NN perform the same function then it may be better to train one NN to perform n tasks rather than to train n NNs to perform n tasks
+- training on a set of tasks that could benefit from having shared lower-level features
+- also makes sense if data for multiple tasks is “quite similar”
+- also makes sense it the NN is so big that it can in fact do well on multiple tasks
+- transfer learning is used a lot more to do though
+
