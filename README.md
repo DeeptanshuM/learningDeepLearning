@@ -1,4 +1,8 @@
 # What I've learnt (in reverse chronological order):
+## Course 4: Convolution Neural Networks
+
+## Course 3: Structured Machine Learning Projects
+- description coming soon :)
 
 ## Course 2: Improving Deep Neural Networks
 - [Followed a tensorflow tutorial, and implemented a deep learning model using Tensorflow, to recognize numbers from 0 to 5 from the SIGNS dataset](Tensorflow+Tutorial.ipynb)
@@ -317,3 +321,16 @@ When to use and when not to use end-to-end deep learning
 
 - applied ML is a highly iterative process. If you train a basic model and carry out error analysis (see what mistakes it makes) it will help point you in more promising directions.
 - deep learning algorithms are quite robust to having slightly different train and dev distributions.
+
+***
+
+## Course 4: Convolutional Neural Networks
+
+### Padding:
+- n x n image convolved (not sure if this is a word) with a f x f filter will result in a n - f +1 x n - f + 1 image —> shrinking outputs
+- corner pixels aren’t used nearly as much as pixels in the center —> throwing away lots of information from corner of the image
+-  so pad the image with 0’s
+- p = number of pixels padded on each border
+- output is now  n + 2p - f + 1 x n + 2p - f + 1
+- valid convolution: no padding
+- same convolution: output size (after convolution) is same as input size — p = (f - 1) / 2 — f is usually odd
