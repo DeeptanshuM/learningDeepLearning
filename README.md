@@ -334,3 +334,11 @@ When to use and when not to use end-to-end deep learning
 - output is now  n + 2p - f + 1 x n + 2p - f + 1
 - valid convolution: no padding
 - same convolution: output size (after convolution) is same as input size — p = (f - 1) / 2 — f is usually odd
+
+### Strided convolution:
+- if stride is s —> output is a square of dimension floor of [((n + 2*p -f) / s) + 1]
+
+### Convolution on RGB images
+- image and filter must have same number of channels (height * width * # channels)
+- image n x n x nc; filter f x f x nc; output n - f + 1 x n - f + 1 x number of filters (also equal to number of features you are detecting)
+- nc is number of channels; also called depth of the filter
