@@ -342,3 +342,14 @@ When to use and when not to use end-to-end deep learning
 - image and filter must have same number of channels (height * width * # channels)
 - image n x n x nc; filter f x f x nc; output n - f + 1 x n - f + 1 x number of filters (also equal to number of features you are detecting)
 - nc is number of channels; also called depth of the filter
+
+### One layer of a Convolutional Network
+- a 3 X 3 X 3 filter yields 27 parameters 
+- one such filter will give 27 parameter + 1 bias terms
+- ***Number of parameters in one layer***:if you have N filters of dimension n * n * n — then number of parameters will N * (( n * n * n) + 1) — ***this number of parameters is independent of the size of the input image***, ***this property make CNNs less prone to overfitting***
+- height or width in layer l = floor(((height or width in layer l - 1 + 2*padding in layer l - filter in layer l) /  stride of layer l) + 1)
+- number of channels in the output is just the number of filters in the layer
+- each filter is: f X f X number of channels in previous layer
+- activation = height * width * number of channels * number of training examples
+- weights =  f X f X number of filters in layer l - 1 X number of filters in layer l
+- bias = vector of dimension number of channels — convenient to represent it as (1, 1, 1, vector of dimension number of channels )
