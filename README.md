@@ -353,3 +353,15 @@ When to use and when not to use end-to-end deep learning
 - activation = height * width * number of channels * number of training examples
 - weights =  f X f X number of filters in layer l - 1 X number of filters in layer l
 - bias = vector of dimension number of channels — convenient to represent it as (1, 1, 1, vector of dimension number of channels )
+
+### Pooling layers
+- no padding
+- no parameters to learn
+- only hyper parameters to be set— f and s — either by hand or cross validation 
+
+### CNN example
+- CONV — POOL — CONV — POOL — FC — FC — FC — SOFTMAX
+
+### Why Convolutions?
+- parameter sharing: a feature detector thats useful in one part of the image is probably useful in another part of the image 
+- sparsity of connections: in each layer, each output value is dependent on only a small number of inputs
