@@ -1,5 +1,6 @@
 # What I've learnt (in reverse chronological order):
-## Course 4: Convolution Neural Networks
+## Course 4: Convolutional Neural Networks
+- [Implemented a Convolutional Neural Network using numpy](Convolution+model+-+Step+by+Step+-+v2.ipynb)
 
 ## Course 3: Structured Machine Learning Projects
 - description coming soon :)
