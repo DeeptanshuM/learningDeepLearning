@@ -365,3 +365,7 @@ When to use and when not to use end-to-end deep learning
 ### Why Convolutions?
 - parameter sharing: a feature detector thats useful in one part of the image is probably useful in another part of the image 
 - sparsity of connections: in each layer, each output value is dependent on only a small number of inputs
+
+### Quiz notes
+- Pooling layers do not have parameters, but they do affect the backpropagation (derivatives) calculation
+
