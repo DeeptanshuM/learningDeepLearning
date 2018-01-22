@@ -1,5 +1,6 @@
 # What I've learnt (in reverse chronological order):
 ## Course 4: Convolutional Neural Networks
+- [Built and trained a ConvNet in TensorFlow for a classification problem](Convolution+model+-+Application+-+v1.ipynb)
 - [Implemented a Convolutional Neural Network using numpy](Convolution+model+-+Step+by+Step+-+v2.ipynb)
 
 ## Course 3: Structured Machine Learning Projects
