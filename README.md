@@ -371,3 +371,30 @@ When to use and when not to use end-to-end deep learning
 ### Quiz notes
 - Pooling layers do not have parameters, but they do affect the backpropagation (derivatives) calculation
 
+***
+
+## Course 5: Sequence Models
+
+### Why sequence models
+- sequence models are useful for mapping sequential inputs to sequential output
+
+### Notation
+- input: x and output: y
+- element: x<index number> y<index number> 
+- element: example, word being looked at at a certain time
+- length of sequenceTx Ty
+- tth element in the input of ith training example: x(i)<t>
+- length of output sequence of ith training example: Tx(i)
+- vocabulary: column vector of <some number> words based on which one hot encoded vectors are generated to represent input sentences
+
+### Recurrent Neural Network Model
+- Cons of standard network:
+	- inputs and outputs can be different lengths in different examples
+	- doesn’t share features learned across different positions of text
+- RNNs don’t have either of these disadvantages
+- RNNs use information from earlier (and later) in the sequence
+- forward prop:
+![rnn_notation_1](images/rnn_notation_1.png?raw=true)
+-  simplified RNN Notation
+￼![rnn_notation_2](images/rnn_notation_2.png?raw=true)
+
