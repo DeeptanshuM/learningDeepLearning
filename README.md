@@ -433,3 +433,12 @@ When to use and when not to use end-to-end deep learning
 - ![LSTM](images/LSTM.png?raw=true)
 - advantage of GRU: simpler, more scalable
 - LSTM have been historically better
+
+### Bidirectional RNN
+- BRNN with LSTM — reasonable first thing to try to solve a NLP problem
+- ![BRNN](images/BRNN.png?raw=true)
+
+### Deep RNN
+- for learning very complex functions it might be useful to stack many RNNs
+- ![DeepRNN](images/DeepRNN.png?raw=true)
+- even 3 layers are a lot because of temporal dimension
