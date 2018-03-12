@@ -398,3 +398,15 @@ When to use and when not to use end-to-end deep learning
 -  simplified RNN Notation
 ￼![rnn_notation_2](images/rnn_notation_2.png?raw=true)
 
+### Backpropagation through time
+- ![backprop](images/backprop.png?raw=true)
+
+### Different types of RNNs
+- many to many (e.g. named entity recognition) , many to one (e.g. sentiment analysis), one to one (standard NN), one to many (e.g. music generation)
+- ![types of RNNs](images/RNNTypes.png?raw=true)
+
+### Language model and sequence generation
+- language model —> finds P(sentence)
+- training set: 1st tokenize sentence
+- RNN model example:
+![types of RNN models](images/egRNNModel.png?raw=true)
