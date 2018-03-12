@@ -442,3 +442,6 @@ When to use and when not to use end-to-end deep learning
 - for learning very complex functions it might be useful to stack many RNNs
 - ![DeepRNN](images/DeepRNN.png?raw=true)
 - even 3 layers are a lot because of temporal dimension
+
+### Quiz: Recurrent Neural Networks
+- When using a finished training a language model RNN to sample random sentences: (i) Use the probabilities output by the RNN to randomly sample a chosen word for that time-step as y^<t>. (ii) Then pass this selected word to the next time-step.
