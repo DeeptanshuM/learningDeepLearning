@@ -410,3 +410,26 @@ When to use and when not to use end-to-end deep learning
 - training set: 1st tokenize sentence
 - RNN model example:
 ![types of RNN models](images/egRNNModel.png?raw=true)
+
+### Vanishing gradients with RNNs
+- basic RNNs not good at capturing long-term dependencies
+- if exploding gradients: apply gradient clipping
+
+### Gated Recurrent Unit (GRU)
+- hidden layer of RNN / RNN unit:
+![RNNUnit](images/RNNUnit.png?raw=true)
+- GRU unit:
+![simplifiedGRUunit](images/simplifiedGRUunit.png?raw=true)
+- gamma u (the gate) decides when the value of the memory cell is updated
+- the purple curly braces equation in the picture above handles the vanishing gradient problem
+- full gamma unit:
+![fullGRU](images/fullGRU.png?raw=true)
+- gamma r stands for relevance
+
+### Long Short Term Memory (LSTM)
+- more powerful and more general version of LSTM
+- instead of just gamma u we have 2 gates- forget and output games
+- * denotes element-wise multiplication
+- ![LSTM](images/LSTM.png?raw=true)
+- advantage of GRU: simpler, more scalable
+- LSTM have been historically better
