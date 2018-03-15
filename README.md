@@ -1,5 +1,6 @@
 # What I've learnt (in reverse chronological order):
 ## Course 5: Sequence Models
+- [Built a character level language model to generate new names](Dinosaurus+Island+--+Character+level+language+model+final+-+v3.ipynb)
 - [Implemented a recurrent neural network - step by step](Building+a+Recurrent+Neural+Network+-+Step+by+Step+-+v3.ipynb)
 
 ## Course 4: Convolutional Neural Networks
