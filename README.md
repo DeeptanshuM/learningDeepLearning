@@ -1,4 +1,7 @@
 # What I've learnt (in reverse chronological order):
+## Course 5: Sequence Models
+- [Implemented a recurrent neural network - step by step](Building+a+Recurrent+Neural+Network+-+Step+by+Step+-+v3.ipynb)
+
 ## Course 4: Convolutional Neural Networks
 - [Built and trained a ConvNet in TensorFlow for a classification problem](Convolution+model+-+Application+-+v1.ipynb)
 - [Implemented a Convolutional Neural Network using numpy](Convolution+model+-+Step+by+Step+-+v2.ipynb)
