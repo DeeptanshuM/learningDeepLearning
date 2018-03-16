@@ -390,7 +390,22 @@ When to use and when not to use end-to-end deep learning
 	- still has about 138 million parameters
 	- relative uniformity of this architecture made this attractive
 	- ![VGG16img](images/VGG16img.png?raw=true)
-	
+
+### ResNets
+- very deep NNs fail because of exploding and vanishing gradients
+- skip connections allow taking activation from one layer and suddenly feeding it to a layer much deeper in the NN
+- Residual blocks like the one in the picture below are stacked together to make very deep networks 
+	- ![ResidualBlocks_img](images/ResidualBlocks_img.png?raw=true)
+- 5 residual blocks stacked together:
+	- ![five_ResidualBlocks_img](images/five_ResidualBlocks_img.png?raw=true)
+
+### Why ResNets Work
+- without adding residual blocks: in very deep plain networks learning even the identity function becomes difficult
+- main reason ResNet works is that it’s so easy for these extra layers to learn the identity function 
+- ![whyResNetswork_img](images/whyResNetswork_img.png?raw=true)
+- ![ResNet_img](images/ResNet_img.png?raw=true)	
+
+
 ***
 
 ## Course 5: Sequence Models
