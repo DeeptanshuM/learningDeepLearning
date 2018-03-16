@@ -376,6 +376,21 @@ When to use and when not to use end-to-end deep learning
 ### Quiz notes
 - Pooling layers do not have parameters, but they do affect the backpropagation (derivatives) calculation
 
+### Classic Networks
+- LeNet - 5
+	- ![LeNetimg](images/LeNetimg.png?raw=true)
+- AlexNet
+	- about 60 million parameters vs LeNet’s 60,000
+	- easy paper to read
+	- ![AlexNetimg](images/AlexNetimg.png?raw=true)
+- VGG-16
+	- AlexNet has a complicated architecture and too many hyper parameters
+	- reduce hyper parameters and have a much simpler network
+	- focus on just having conv-layers that are just three-by-three filters with a stride of one and always use same padding and make max pooling layers 2-by-2 with a stride of two
+	- still has about 138 million parameters
+	- relative uniformity of this architecture made this attractive
+	- ![VGG16img](images/VGG16img.png?raw=true)
+	
 ***
 
 ## Course 5: Sequence Models
