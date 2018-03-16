@@ -405,6 +405,18 @@ When to use and when not to use end-to-end deep learning
 - ![whyResNetswork_img](images/whyResNetswork_img.png?raw=true)
 - ![ResNet_img](images/ResNet_img.png?raw=true)	
 
+### Networks in Networks and 1x1 Convolutions
+ 
+- add non-linearity to a network and allows you to change number of channels
+- very useful in building the inception neural network
+- ![1by1_img1](images/1by1_img1.png?raw=true)
+- ![1by1_img2](images/1by1_img2.png?raw=true)
+
+### Inception Network Motivation
+- instead of choosing filter size for conv layer or making a choice between conv layer and a pooling layer — do them all
+- ![inception_img](images/inception_img.png?raw=true)
+- ![computationproblem_img](images/computationproblem_img.png?raw=true)
+- ![computationproblemsolution_img](images/computationproblemsolution_img.png?raw=true)
 
 ***
 
