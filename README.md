@@ -422,6 +422,17 @@ When to use and when not to use end-to-end deep learning
 - ![inception_module](images/inception_module.png?raw=true)
 - ![inception_network](images/inception_network.png?raw=true)
 
+### Practical advices for using ConvNets
+- review transfer learning video for review of tricks
+- data augmentation: mirroring, random cropping, color shifting (e.g. PCA color augmentation) 
+- to do well on benchmarks/winning competitions 
+	- ensembling: train several networks independently and average their outputs
+	- multi-crop at test time: run classifier on multiple versions of test images and average results
+
+- use architectures of networks published in the literature 
+- use open source implementation if possible
+- use retrained models and fine-tune on your dataset
+
 ***
 
 ## Course 5: Sequence Models
