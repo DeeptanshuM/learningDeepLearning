@@ -403,7 +403,7 @@ When to use and when not to use end-to-end deep learning
 - without adding residual blocks: in very deep plain networks learning even the identity function becomes difficult
 - main reason ResNet works is that it’s so easy for these extra layers to learn the identity function 
 - ![whyResNetswork_img](images/whyResNetswork_img.png?raw=true)
-- ![ResNet_img](images/ResNet_img.png?raw=true)	
+- ![ResNetimg](images/ResNetimg.png?raw=true)	
 
 ### Networks in Networks and 1x1 Convolutions
  
@@ -417,6 +417,10 @@ When to use and when not to use end-to-end deep learning
 - ![inception_img](images/inception_img.png?raw=true)
 - ![computationproblem_img](images/computationproblem_img.png?raw=true)
 - ![computationproblemsolution_img](images/computationproblemsolution_img.png?raw=true)
+
+### Inception Network
+- ![inception_module](images/inception_module.png?raw=true)
+- ![inception_network](images/inception_network.png?raw=true)
 
 ***
 
