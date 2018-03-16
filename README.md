@@ -433,6 +433,14 @@ When to use and when not to use end-to-end deep learning
 - use open source implementation if possible
 - use retrained models and fine-tune on your dataset
 
+### Quiz - Deep convolutional models
+- as you move to deeper layers in a ConvNet: nH and nW decrease while nC increases
+- typically in a ConvNet: Multiple CONV layers are followed by a POOl layer and there are FC layers in the last few layers
+- false: In order to be able to build very deep networks, we usually only use pooling layers to downsize the height/width of the activation volumes while convolutions are used with “valid” padding. Otherwise, we would downsize the input of the model too quickly.
+- false: Training a deeper network (for example, adding additional layers to the network) allows the network to fit more complex functions and thus almost always results in lower training error. For this question, assume we’re referring to “plain” networks.
+- Suppose you have an input volume of dimension 64x64x16. How many parameters would a single 1x1 convolutional filter have (including the bias)? Ans = 17
+- The following equation captures the computation in a ResNet block. What goes into the two blanks above?
+	- a[l+2]=g(W[l+2]g(W[l+1]a[l]+b[l+1])+bl+2+_______ )+_______ Ans= a[l], 0
 ***
 
 ## Course 5: Sequence Models
