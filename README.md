@@ -4,7 +4,8 @@
 - [Built a character level language model to generate new names](Dinosaurus+Island+--+Character+level+language+model+final+-+v3.ipynb)
 - [Implemented a recurrent neural network - step by step](Building+a+Recurrent+Neural+Network+-+Step+by+Step+-+v3.ipynb)
 
-## Course 4: Convolutional Neural Networks
+## Course 4: Convolutional Neural Networks 
+- [Implemented the basic building blocks of ResNets and put them together to train a state-of-the-art neural network for image classification. Used Keras.](Residual+Networks+-+v2.ipynb) 
 - [Built and trained a ConvNet in TensorFlow for a classification problem](Convolution+model+-+Application+-+v1.ipynb)
 - [Implemented a Convolutional Neural Network using numpy](Convolution+model+-+Step+by+Step+-+v2.ipynb)
 
