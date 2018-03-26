@@ -1,6 +1,6 @@
 # What I've learnt (in reverse chronological order):
 ## Course 5: Sequence Models
-- [Implement a model that uses an LSTM to generate music and used it to generate music](Improvise+a+Jazz+Solo+with+an+LSTM+Network+-+v3.ipynb)
+- [Implemented a model that uses an LSTM to generate music and used it to generate music](Improvise+a+Jazz+Solo+with+an+LSTM+Network+-+v3.ipynb)
 - [Built a character level language model to generate new names](Dinosaurus+Island+--+Character+level+language+model+final+-+v3.ipynb)
 - [Implemented a recurrent neural network - step by step](Building+a+Recurrent+Neural+Network+-+Step+by+Step+-+v3.ipynb)
 
@@ -519,24 +519,56 @@ When to use and when not to use end-to-end deep learning
 
 ### Word representation:
 - inner product between any 2 1-hot vectors is zero: so 1-hot representation of words isn’t good enough because algorithm can’t learn analogies
-- [featurized representation](images/featurized_representation.png)
+- [featurized representation](images/featurized_representation.png?raw=true)
 -  t-SNE algorithm: visualize word embeddings
-  [t-SNE] (images/t-SNE.png)
+  [t-SNE](images/t-SNE.png?raw=true)
 
 ### Using word embeddings:
 - most useful when don’t have too much data; has even less useful for language modeling and machine translation tasks 
 - procedure:
-[procedure](images/procedure.png)
+[procedure](images/procedure.png?raw=true)
 
 ### Properties of word embeddings
 - they can also help with analogy reasoning
 - example:
-[example](images/eg_word_embeddings_use)
+[example](images/eg_word_embeddings_use.png?raw=true)
 - how it’s implemented:
 	- look at differences and find similarity
 	- most common similarity used is cosine similarity
 	- can also use Euclidean distance (to measure dissimilarity)
-	- [implementation](images/implementation_word_embeddings)
-	- [implementation](images/similarity_function)
+	- [implementation](images/implementation_word_embeddings.png?raw=true)
+	- [implementation](images/similarity_function.png?raw=true)
 
+### Embedding matrix
+- initialize it randomly and use gradient descent to learn all the parameters
+- in practice use speculated function to look up an embedding because matrix multiplication is too slow
+- [Embedding matrix](images/embedding_matrix.png?raw=true)
+
+### Learning word embeddings:
+- neural language model is good enough: input the context (the last 4 words) and predict the target word — this allows you to learn word embedding
+
+### Words2Vec model:
+- simpler and computationally more efficient than building a neural language model to learn word embedding
+- Skip-gram model: O sub c is the one hot vector go the input context word, then multiply by E to get the embedding vector of the input context word and then feed it to a softmax unit
+- [skipgram_model](images/skipgram_model.png?raw=true)
+- softmax classification is not scalable, because each time you need to sum all the elements, can use Hierarchical softmax classifier (tree with common word on top, not balanced or symmetrical) to get log time instead of linear time
+
+### Negative sampling:
+- supervised learning problem— given a pair of words are they likely to occur together
+- context-word-target — generate 1st row to be one, rest pick words randomly from the dictionary and set them to be 0
+- define a logistic regression model
+- for every correct example you have k wrong pairs
+- on each iteration train k + 1 binary logistic regression classifiers instead of a giant softmax 
+- to select negative example use this heuristic: [](images/negative_eg_heuristic.png?raw=true)
+- [negative_sampling](images/negative_sampling.png?raw=true)
+
+### Glove word vectors
+- Xij counts how often i and j occur together
+- use gradient descent to learn theta and e
+- won’t sum over terms where Xij is 0
+- theta i and e j are symmetric
+- initialize theta and e uniformly around gradient descent to minimize it’s objective
+- [glove_word_model](images/glove_word_model.png?raw=true)
+
+- Note about featurization: can’t guarantee that the individual embeddings (individual rows of the embedding matrix )are interpretable
 
