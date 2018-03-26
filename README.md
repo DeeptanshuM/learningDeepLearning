@@ -516,3 +516,27 @@ When to use and when not to use end-to-end deep learning
 
 ### Quiz: Recurrent Neural Networks
 - When using a finished training a language model RNN to sample random sentences: (i) Use the probabilities output by the RNN to randomly sample a chosen word for that time-step as y^<t>. (ii) Then pass this selected word to the next time-step.
+
+### Word representation:
+- inner product between any 2 1-hot vectors is zero: so 1-hot representation of words isn’t good enough because algorithm can’t learn analogies
+- [featurized representation](images/featurized_representation.png)
+-  t-SNE algorithm: visualize word embeddings
+  [t-SNE] (images/t-SNE.png)
+
+### Using word embeddings:
+- most useful when don’t have too much data; has even less useful for language modeling and machine translation tasks 
+- procedure:
+[procedure](images/procedure.png)
+
+### Properties of word embeddings
+- they can also help with analogy reasoning
+- example:
+[example](images/eg_word_embeddings_use)
+- how it’s implemented:
+	- look at differences and find similarity
+	- most common similarity used is cosine similarity
+	- can also use Euclidean distance (to measure dissimilarity)
+	- [implementation](images/implementation_word_embeddings)
+	- [implementation](images/similarity_function)
+
+
