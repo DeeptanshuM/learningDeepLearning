@@ -572,3 +572,38 @@ When to use and when not to use end-to-end deep learning
 
 - Note about featurization: can’t guarantee that the individual embeddings (individual rows of the embedding matrix )are interpretable
 
+### Quiz notes
+
+- Suppose you learn a word embedding for a vocabulary of 10000 words. Then the embedding vectors should be 10000 dimensional, so as to capture the full range of variation and meaning in those words.
+	- False
+	- The dimension of word vectors is usually smaller than the size of the vocabulary. Most common sizes for word vectors ranges between 50 and 400.
+
+- What is t-SNE? A non-linear dimensionality reduction technique.
+
+- Suppose you download a pre-trained word embedding which has been trained on a huge corpus of text. You then use this word embedding to train an RNN for a language task of recognizing if someone is happy from a short snippet of text, using a small training set.
+
+x (input text)	y (happy?)
+I'm feeling wonderful today!	1
+I'm bummed my cat is ill.	0
+Really enjoying this!	1
+
+	- True: Word vectors empower your model with an incredible ability to generalize. The vector for "ecstatic would contain a positive/happy connotation which will probably make your model classified the sentence as a "1".
+
+- Examples of equations that should hold for a good word embedding:
+eboy−egirl≈ebrother−esister, eboy−ebrother≈egirl−esister
+
+- When learning word embeddings, we create an artificial task of estimating P(target∣context). It is okay if we do poorly on this artificial prediction task; the more important by-product of this task is that we learn a useful set of word embeddings.
+
+- In the word2vec algorithm, you estimate P(t∣c), where t is the target word and c is a context word. How are t and c chosen from the training set? c and t are chosen to be nearby words.
+
+- Suppose you have a 10000 word vocabulary, and are learning 500-dimensional word embeddings. The word2vec model uses that softmax function.
+	- True:
+		- θt and ec are both 500 dimensional vectors.
+		- θt and ec are both trained with an optimization algorithm such as Adam or gradient descent.
+	- False:
+		- θt and ec are both 10000 dimensional vectors.
+		- After training, we should expect θt to be very close to ec when t and c are the same word.
+
+- In GloVe model: θi and ej should be initialized randomly at the beginning of training, Xij is the number of times word i appears in the context of word j, The weighting function f(.) must satisfy f(0)=0.
+
+
