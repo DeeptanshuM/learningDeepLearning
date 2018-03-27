@@ -1,5 +1,6 @@
 # What I've learnt (in reverse chronological order):
 ## Course 5: Sequence Models
+- [Used word vector representations to build an Emojifier: implement a model which inputs a sentence (such as "Let's go see the baseball game tonight!") and finds the most appropriate emoji to be used with this sentence (⚾️)).](Emojify+-+v2.ipynb)  
 - [Performed Operations on Words Vectors: loaded pre-trained word vectors, and measured similarity using cosine similarity and used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.](Operations+on+word+vectors+-+v2.ipynb)
 - [Implemented a model that uses an LSTM to generate music and used it to generate music](Improvise+a+Jazz+Solo+with+an+LSTM+Network+-+v3.ipynb)
 - [Built a character level language model to generate new names](Dinosaurus+Island+--+Character+level+language+model+final+-+v3.ipynb)
