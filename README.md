@@ -466,6 +466,18 @@ When to use and when not to use end-to-end deep learning
 ![sliding_windows_implementation_eg](images/sliding_windows_implementation_eg.png?raw=true)
 - problem: accuracy of bounding boxes
 
+### Bounding Box Predictions
+- YOLO algorithm:
+![yolo_algo](images/yolo_algo.png?raw=true)
+- typical grid size is 19 X 19
+- apply image/object localization to each grid — specify y (8 dimensional vector, same as before) for each grid - for 3 X 3 grid the output vector is  3 X 3 X 8 
+- problem: multiple objects in same grid cell
+- to assign object to grid cell, look at mid point of object and assign it to only one grid cell
+- yolo outputs bounding box’s coordinates explicitly and therefore, it’s more accurate - it can output bounding boxes of any size
+- this is one single convolutional implementation as all the computation for this is done using one ConvNet for all the grids as opposed to repeatedly executing the same algorithm for each grid separately
+- this is very fast as it’s a convolutional implementation and therefore, can be used for real time object detection
+- specify the bounding box: bh and bw are relative to grid cell, and also bx and by also have to be between 0 and 1 — maybe more than 1 when bounding box is too big
+
 ***
 
 ## Course 5: Sequence Models
