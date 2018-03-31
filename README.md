@@ -545,6 +545,25 @@ When to use and when not to use end-to-end deep learning
 - training set of pairs of images, train using back propagation
 - this works quite well
 
+### What are deep ConvNets learning?
+- shallow layers detect simple patters and deeper layers detect more complex patterns
+
+### Cost Function for Neural Style Transfer
+- ![cost_function1](images/cost_function1.png?raw=true)
+- ![cost_function2](images/cost_function2.png?raw=true)
+
+### Content Cost Function
+- ![content_cost_function](images/content_cost_function.png?raw=true)
+
+### Style Cost Function
+- let’s say you have  chosen a layer L to define the measure of the style of an image
+- define style as correlation between activations across channels
+- to capture style of image: see how correlated the activations are across different channels
+- why dos this capture style— see Style Cost Function video at 2:30 min mark —correlation tells you which high level textures components tend to occur and not occur together in parts of an image — so using degree of correlation between channels to measure style, we measure to the degree to which ith channel in generated image is correlated to the jth channel in the image and this gives a measure of how similar is the style of the generated image to the style of the input style image
+- style matrix measure the correlations described above
+- it is a nc X nc matrix, because we have nc channels so we need a nc X nc matrix to see how correlated the channels are to each other
+- ![style_matrix](images/style_matrix.png?raw=true)
+- ![style_cost](images/style_cost.png?raw=true)
 ***
 
 ## Course 5: Sequence Models
