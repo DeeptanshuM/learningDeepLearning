@@ -447,6 +447,17 @@ When to use and when not to use end-to-end deep learning
 - you can use a 1x1 convolutional layer to reduce nC but not nH, nW
 - you can use a pooling layer to reduce nH, nW, but not nC
 
+### Object Localization
+-  ![object_localization](images/object_localization.png?raw=true)
+
+### Landmark Detection
+- add a bunch of output units to output the coordinates of different landmarks you want to recognize
+
+### Object Detection
+- Sliding windows detection: slide a rectangular window over an image, each time feed it into a ConvNet that’ll make a prediction, repeat with a bigger window each time
+- computational cost is abhorrent 
+
+
 ***
 
 ## Course 5: Sequence Models
