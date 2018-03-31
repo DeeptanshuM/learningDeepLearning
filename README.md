@@ -478,6 +478,33 @@ When to use and when not to use end-to-end deep learning
 - this is very fast as it’s a convolutional implementation and therefore, can be used for real time object detection
 - specify the bounding box: bh and bw are relative to grid cell, and also bx and by also have to be between 0 and 1 — maybe more than 1 when bounding box is too big
 
+### Intersection Over Union
+- function to evaluate object detection: size of predicted bounding box / size true bounding box
+- correct if IoU >= .5 (by convention)
+
+### Non-max Suppression
+- problem with object detection algos studied so far: algo will detect same object multiple times
+- non-max suppression cleans up multiple detections
+- keep detection with highest probability and get rid of other rectangles with high ioU with respect to the bounding box
+- ![nonmax_suppression_algo](images/nonmax_suppression_algo.png?raw=true)
+
+### Anchor Boxes
+- define shapes of bounding boxes
+- ![anchor_boxes1](images/anchor_boxes1.png?raw=true)
+- if more objects then higher dimension of y
+- example:
+ ![anchor_boxes2](images/anchor_boxes2.png?raw=true)
+- (rare) problem: multiple objects in same grid…
+
+### YOLO Algorithm
+- training set: trying to detect 3 things so 3 classes of labels; output vector is 3 X 3 X 2 X 8 because grid is 3 X 3 and 2 anchors and 8 because 8 = 1 for pc + 4 for bounding boxes + # num classes; y can be 3 X 3 X 16 in this case
+- train a ConvNet that inputs an image (say 100 X 100 X 3) and outs 3 X 3 X 16 y
+- make predictions and then apply non-max suppression
+- ![yolo_nonmax](images/yolo_nonmax.png?raw=true)
+ 
+### Region Proposals
+- … still slow … … but accurate …
+
 ***
 
 ## Course 5: Sequence Models
