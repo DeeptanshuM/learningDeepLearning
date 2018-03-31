@@ -444,6 +444,9 @@ When to use and when not to use end-to-end deep learning
 - Suppose you have an input volume of dimension 64x64x16. How many parameters would a single 1x1 convolutional filter have (including the bias)? Ans = 17
 - The following equation captures the computation in a ResNet block. What goes into the two blanks above?
 	- a[l+2]=g(W[l+2]g(W[l+1]a[l]+b[l+1])+bl+2+_______ )+_______ Ans= a[l], 0
+- you can use a 1x1 convolutional layer to reduce nC but not nH, nW
+- you can use a pooling layer to reduce nH, nW, but not nC
+
 ***
 
 ## Course 5: Sequence Models
