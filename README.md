@@ -513,6 +513,38 @@ When to use and when not to use end-to-end deep learning
 	- 2N (why?????)
 - You are working on a factory automation task. Your system will see a can of soft-drink coming down a conveyor belt, and you want it to take a picture and decide whether (i) there is a soft-drink can in the image, and if so (ii) its bounding box. Since the soft-drink can is round, the bounding box is always square, and the soft drink can always appears as the same size in the image. There is at most one soft drink can in each image. What is the most appropriate set of output units for your neural network?
 	- Logistic unit bx and by
+
+### What is face recognition
+- ![verification_vs_recognition](images/verification_vs_recognition.png?raw=true)
+- problem: one shot problem
+
+### One Shot Learning
+- means you need to recognize a person given just one image
+- not enough to train a neural network with just one image
+- also, will have to train NN overtime the number of people to be recognized increases
+- need a function to output degree of difference of between images
+
+### Siamese network
+- ![Siamese_network](images/Siamese_network.png?raw=true)
+- both networks have same parameters
+- train a NN that determines if the pictures are of the same person
+- ![goal_of_Siamese](images/goal_of_Siamese.png?raw=true)
+
+### Triplet Loss
+- distance between Anchor, Positive and Negative images
+- ![triplet_loss](images/triplet_loss.png?raw=true)
+- ![loss_function](images/loss_function.png?raw=true)
+- ![choosing_trips](images/choosing_trips.png?raw=true)
+- take training set and map triplets A,P and N, use gradient descent to try to minimize the cost function J, this will have the effect of back propagating to all of the parameters of the neural network in order to learn an encoding so that the difference of 2 images that’ll be small for 2 images of same person and large for 2 images of different person
+- commercial face recognition companies use millions of images in their dataset download their pre-trained models
+
+### Face Verification and Binary Classification
+- ![face_binary_idea](images/face_binary_idea.png?raw=true)
+- ![face_binary_how](images/face_binary_how.png?raw=true)
+- precompute encoding of dataset to reduce redundant computations when new data is added to the dataset
+- training set of pairs of images, train using back propagation
+- this works quite well
+
 ***
 
 ## Course 5: Sequence Models
