@@ -564,6 +564,26 @@ When to use and when not to use end-to-end deep learning
 - it is a nc X nc matrix, because we have nc channels so we need a nc X nc matrix to see how correlated the channels are to each other
 - ![style_matrix](images/style_matrix.png?raw=true)
 - ![style_cost](images/style_cost.png?raw=true)
+
+### 1D and 3D Generalizations
+- for 1d data generally RNNs are used instead of ConvNets
+- ![generalization1](images/generalization1.png?raw=true)
+-  e.g. of 3d data: CAT scans
+- ![generalization2](images/generalization2.png?raw=true)
+
+### Quiz: Special applications: Face recognition & Neural style transfer
+- Face verification requires comparing a new picture against one person’s face, whereas face recognition requires comparing a new picture against K person’s faces
+- Why do we learn a function d(img1,img2) for face verification?
+	- We need to solve a one-shot learning problem.
+	- This allows us to learn to recognize a new person given just a single image of that person.
+- False: In order to train the parameters of a face recognition system, it would be reasonable to use a training set comprising 100,000 pictures of 100,000 different persons.
+- In Siamese Networks, the upper and lower neural networks have different input images, but have exactly the same parameters.
+- False: Neural style transfer is trained as a supervised learning task in which the goal is to input two images (x), and train a network to output a new, synthesized image (y).
+- In the deeper layers of a ConvNet, each channel corresponds to a different feature detector. The style matrix G[l] measures the degree to which the activations of different feature detectors in layer l vary (or correlate) together with each other.
+- In neural style transfer, what is updated in each iteration of the optimization algorithm? 
+	- The pixel values of the generated image G
+- You are working with 3D data. You are building a network layer whose input volume has size 32x32x32x16 (this volume has 16 channels), and applies convolutions with 32 filters of dimension 3x3x3 (no padding, stride 1). What is the resulting output volume? 
+	- Ans: 30x30x30x32
 ***
 
 ## Course 5: Sequence Models
