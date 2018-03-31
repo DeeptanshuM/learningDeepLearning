@@ -7,6 +7,7 @@
 - [Implemented a recurrent neural network - step by step](Building+a+Recurrent+Neural+Network+-+Step+by+Step+-+v3.ipynb)
 
 ## Course 4: Convolutional Neural Networks 
+- [learn how YOLO works, then apply it to car detection; implemented non-max suppression using TensorFlow](Autonomous+driving+application+-+Car+detection+-+v3.ipynb)
 - [Implemented the basic building blocks of ResNets and put them together to train a state-of-the-art neural network for image classification. Used Keras.](Residual+Networks+-+v2.ipynb) 
 - [Built and trained a ConvNet in TensorFlow for a classification problem](Convolution+model+-+Application+-+v1.ipynb)
 - [Implemented a Convolutional Neural Network using numpy](Convolution+model+-+Step+by+Step+-+v2.ipynb)
