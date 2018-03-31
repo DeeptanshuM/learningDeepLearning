@@ -457,6 +457,14 @@ When to use and when not to use end-to-end deep learning
 - Sliding windows detection: slide a rectangular window over an image, each time feed it into a ConvNet that’ll make a prediction, repeat with a bigger window each time
 - computational cost is abhorrent 
 
+### Convolational Implementation of Sliding Windows
+- idea:
+![sliding_windows_implementation_idea](images/sliding_windows_implementation_idea.png?raw=true)
+- implementation:
+![sliding_windows_implementation](images/sliding_windows_implementation.png?raw=true)
+- example:
+![sliding_windows_implementation_eg](images/sliding_windows_implementation_eg.png?raw=true)
+- problem: accuracy of bounding boxes
 
 ***
 
