@@ -799,3 +799,19 @@ eboy−egirl≈ebrother−esister, eboy−ebrother≈egirl−esister
 - ![attention2](images/attention2.png?raw=true)
 - this algo runs in quadratic time
 - alpha<t, t’> will take Tx * Ty time 
+
+### Speech recognition 
+- earlier speech recognition systems were built using phonemes
+- now attention models are used, CTC models are used
+- connectionist temporal classification…
+
+### Trigger Word Detection
+- ![trigger](images/trigger.png?raw=true)
+
+### Quiz: Sequence models & Attention mechanism
+- In machine translation, if we carry out beam search without using sentence normalization, the algorithm will tend to output overly short translations.
+- you work on your algorithm for a few more weeks, and now find that for the vast majority of examples on which your algorithm makes a mistake, P(y∗∣x)>P(y^∣x). This suggest you should focus your attention on improving the search algorithm.
+- in attention models We expect alpha <t,t’> to be generally larger for values of alpha <t’>that are highly relevant to the value the network should output for y<t>.
+- alpha <t,t’> summed over t’ is 1
+- The network learns where to “pay attention” by learning the values e<t, t’>, which are computed using a small neural network: We can't replace s<t−1> with s<t> as an input to this neural network. This is because s<t> depends on alpha <t,t’> which in turn depends on e<t,t’>; so at the time we need to evaluate this network, we haven’t computed s<t> yet.
+- In trigger word detection, x<t> is Features of the audio (such as spectrogram features) at time t
