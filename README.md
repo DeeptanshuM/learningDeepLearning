@@ -779,3 +779,23 @@ eboy−egirl≈ebrother−esister, eboy−ebrother≈egirl−esister
 - ![example_beam2](images/example_beam2.png?=true)
 - ![error_analysis](images/error_analysis.png?=true)
 - Note: in case 2 the objective function may be at fault, not the RNN
+
+### Bleu score
+- bilingual evaluation understudy: see if words in machine generated output appear in human generated output
+- precision: see if the word i appears in a reference, = # appearances in references / # words in machine generated output
+- modified precision: see if the word i appears in a reference, = # appearances in references (unto max appearances in any one reference) / # words in machine generated output
+- bleu score on bigrams: max # appearances of bigram in any one reference / count of bigrams
+- very popular and useful, download open source implementation
+- ![bleu](images/blue.png?raw=true)
+
+### Attention Model Intuition
+- look at part of sentence, translate it, then move on to the next part of the sentence… and so on…
+- like humans translate a long sentence
+
+### Attention Model
+- one of the most powerful ideas in Deep Learning
+- alpha parameters tell us how much the context will depend on the attention/activation we’re getting from different time steps
+- ![attention1](images/attention1.png?raw=true)
+- ![attention2](images/attention2.png?raw=true)
+- this algo runs in quadratic time
+- alpha<t, t’> will take Tx * Ty time 
