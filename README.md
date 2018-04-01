@@ -750,4 +750,32 @@ eboy−egirl≈ebrother−esister, eboy−ebrother≈egirl−esister
 
 - In GloVe model: θi and ej should be initialized randomly at the beginning of training, Xij is the number of times word i appears in the context of word j, The weighting function f(.) must satisfy f(0)=0.
 
+### Basic Models
+- (encoding network + decoding network) works well for machine translation and image captioning
 
+### Picking the most likely sentence
+- ![conditional_lang_model](images/conditional_lang_model.png?raw=true)
+- find value of  English sentence y that maximizes conditional probability P(y—english translation | French sentence)
+- why not a greedy search:
+![why_not_greedy](images/why_not_greedy.png?raw=true)
+
+### Beam Search
+- pick first of machine learning translation, consider multiple alternatives, keep track of number of choices equal to beam parameter value, find 2nd word for each of the choices (evaluate P(y<2> | x, choice of first word))
+- in 2nd step end up evaluting beam * dictionary size number of probabilities 
+- at end of 2nd step, keep beam # of most likely choices 
+- so at the beginning of step 3 still keeping track of beam # of choices
+- ![beam1](images/beam1.png?raw=true)
+- ![beam2](images/beam2.png?raw=true)
+
+### Refinements to Beam Search
+- Length normalization:
+![length_norm](images/length_norm.png?=true)
+- higher B better result more computation slower more memory needed
+- “much faster” than BFS and DFS but not guaranteed to find most optimum result for arg max P(y | x)
+
+### Error analysis in beam search
+- compare P(y* | x) and P (y^ | x)
+- ![example_beam1](images/example_beam1.png?=true)
+- ![example_beam2](images/example_beam2.png?=true)
+- ![error_analysis](images/error_analysis.png?=true)
+- Note: in case 2 the objective function may be at fault, not the RNN
