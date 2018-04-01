@@ -1,5 +1,7 @@
 # What I've learnt (in reverse chronological order):
 ## Course 5: Sequence Models
+- [Implemented an algorithm for trigger word detection (sometimes also called keyword detection, or wakeword detection). Trigger word detection is the technology that allows devices like Amazon Alexa, Google Home, Apple Siri, and Baidu DuerOS to wake up upon hearing a certain word](Trigger+word+detection+-+v1.ipynb)
+- [Built a Neural Machine Translation (NMT) model to translate human readable dates ("25th of June, 2009") into machine readable dates ("2009-06-25"). Did this using an attention model](Neural+machine+translation+with+attention+-+v4.ipynb)
 - [Used word vector representations to build an Emojifier: implement a model which inputs a sentence (such as "Let's go see the baseball game tonight!") and finds the most appropriate emoji to be used with this sentence (⚾️)).](Emojify+-+v2.ipynb)  
 - [Performed Operations on Words Vectors: loaded pre-trained word vectors, and measured similarity using cosine similarity and used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.](Operations+on+word+vectors+-+v2.ipynb)
 - [Implemented a model that uses an LSTM to generate music and used it to generate music](Improvise+a+Jazz+Solo+with+an+LSTM+Network+-+v3.ipynb)
