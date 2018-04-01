@@ -1,6 +1,5 @@
 # What I've learnt (in reverse chronological order):
 ## Course 5: Sequence Models
-- [Implemented the neural style transfer algorithm and generated novel artistic images using this algorithm](Art+Generation+with+Neural+Style+Transfer+-+v2.ipynb)
 - [Used word vector representations to build an Emojifier: implement a model which inputs a sentence (such as "Let's go see the baseball game tonight!") and finds the most appropriate emoji to be used with this sentence (⚾️)).](Emojify+-+v2.ipynb)  
 - [Performed Operations on Words Vectors: loaded pre-trained word vectors, and measured similarity using cosine similarity and used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.](Operations+on+word+vectors+-+v2.ipynb)
 - [Implemented a model that uses an LSTM to generate music and used it to generate music](Improvise+a+Jazz+Solo+with+an+LSTM+Network+-+v3.ipynb)
@@ -8,7 +7,9 @@
 - [Implemented a recurrent neural network - step by step](Building+a+Recurrent+Neural+Network+-+Step+by+Step+-+v3.ipynb)
 
 ## Course 4: Convolutional Neural Networks 
-- [learn how YOLO works, then apply it to car detection; implemented non-max suppression using TensorFlow](Autonomous+driving+application+-+Car+detection+-+v3.ipynb)
+- [Implemented the neural style transfer algorithm and generated novel artistic images using this algorithm](Art+Generation+with+Neural+Style+Transfer+-+v2.ipynb)
+- [Built a face recognition system](Face+Recognition+for+the+Happy+House+-+v3.ipynb)
+- [Learnt how YOLO works, then applied it to car detection; implemented non-max suppression using TensorFlow](Autonomous+driving+application+-+Car+detection+-+v3.ipynb)
 - [Implemented the basic building blocks of ResNets and put them together to train a state-of-the-art neural network for image classification. Used Keras.](Residual+Networks+-+v2.ipynb) 
 - [Built and trained a ConvNet in TensorFlow for a classification problem](Convolution+model+-+Application+-+v1.ipynb)
 - [Implemented a Convolutional Neural Network using numpy](Convolution+model+-+Step+by+Step+-+v2.ipynb)
